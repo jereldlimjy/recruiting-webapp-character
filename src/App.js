@@ -79,7 +79,10 @@ function App() {
   };
 
   const handleSkillAdd = (skill) => {
-    if (skillPointsUsed >= skillPointsAvailable) return;
+    if (skillPointsUsed >= skillPointsAvailable) {
+      alert("You have no skill points to allocate");
+      return;
+    };
 
     setSkillPoints((prevState) => ({
       ...prevState,
